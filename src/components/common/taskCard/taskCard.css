@@ -5,3 +5,23 @@
     max-width: 50rem;
     justify-items: center; 
 }
+
+.green-star {
+    color: green;
+}
+
+.lime-star {
+    color: lime;
+}
+
+.yellow-star {
+    color: yellow;
+}
+
+.orange-star {
+    color: orange;
+}
+
+.red-star {
+    color: red;
+}
