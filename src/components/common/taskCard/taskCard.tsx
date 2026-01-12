@@ -30,7 +30,7 @@ function starDifficulty() {
 
 
         if (Object.prototype.hasOwnProperty.call(difficultyRating, count)) {
-            star.classList.add(`${difficultyRating[count]}`)
+            star.classList.add(difficultyRating[count])
         }
     })
 }
