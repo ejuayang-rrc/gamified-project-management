@@ -1,0 +1,7 @@
+.task-container {
+    border: 0.25rem solid black;
+    border-radius: 50px;
+    padding: 1rem 1rem;
+    max-width: 50rem;
+    justify-items: center; 
+}
