@@ -1,9 +1,11 @@
 import "./Header.css";
 
 function Header() {
-    return(<header>
-        Gamified Project Management App
-    </header>);
+  return(
+    <header>
+      Game-ified Project Management App (OpusQuest)
+    </header>
+  );
 }
 
 export default Header;

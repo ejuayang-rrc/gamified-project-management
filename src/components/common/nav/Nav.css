@@ -1,4 +1,23 @@
+/* Nav CSS styling */
+
 nav {
-    text-align: center;
-    height: 100vh;
+  height: 10vh;
+  width: 100%;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  margin: 1%;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.15s;
+}
+
+a:hover {
+  color: #f73333;
 }
