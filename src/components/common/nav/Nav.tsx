@@ -1,4 +1,3 @@
-import Hamburger from "./hamburger/Hamburger";
 import "./Nav.css";
 
 function Nav() {
@@ -9,12 +8,7 @@ function Nav() {
         <a href="#">Placeholder</a>
         <a href="#">Options</a>
         <a href="#">Account</a>
-        <a href="#">Log Out</a>
       </span>
-
-      <div className="hamburger">
-        <Hamburger />
-      </div>
     </nav>
   );
 }
