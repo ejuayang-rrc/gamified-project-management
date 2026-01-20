@@ -3,8 +3,6 @@ import "./taskCard.css"
 
 import starDifficulty from "../starRating/starRating";
 
-
-
 starDifficulty();
 
 function TaskCard() {
