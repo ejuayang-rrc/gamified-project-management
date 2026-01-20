@@ -17,15 +17,6 @@
 
 /* Components */
 
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3em;
-  width: 3em;
-  margin: 1px;
-}
-
 .links {
   display: flex;
   justify-content: center;
@@ -61,6 +52,8 @@
   }
 
   .mobile {
+    width: 3.5em;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,12 +70,12 @@
   .links {
     ul {
       flex-direction: column;
+      background-color: #303030;
     }
   }
 
   .hamburger-icon {
-    position: absolute;
-    right: 2%;
     cursor: pointer;
+    background-color: #303030;
   }
 }

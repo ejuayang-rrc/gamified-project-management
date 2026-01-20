@@ -4,7 +4,6 @@ import "../Nav.css";
 function NavDesktop() {
   return(
     <nav className="desktop">
-      <h2 className="logo">Logo</h2>
       <Links />
     </nav>
   );

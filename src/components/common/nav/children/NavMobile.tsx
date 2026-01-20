@@ -22,7 +22,6 @@ function NavMobile() {
 
   return(
     <nav className="mobile">
-      <h2 className="logo">Logo</h2>
       {click ? Close : Hamburger}
       {click && <Links />}
     </nav>
