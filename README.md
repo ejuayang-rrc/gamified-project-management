@@ -22,3 +22,23 @@ As an *organizer*, I want to create tasks for my group to complete to track proj
 
 **Viewing task progress as a *user***
 As a *user*, I want to view my total points so that I can track my progress over time.
+
+# Kanban Progress
+
+## Sprint 1
+
+### Josh Salud
+
+- **Feature:** Task Card Component
+- README Documentation
+
+### Ronen Begelfor
+
+- **Feature:** Star Component
+- Application Stylesheet & Guide
+
+### Elijah Juayang
+
+- **Feature:** Nav Bar/Hamburger Menu Component
+- Project and Repository Initialization
+- Vite Integration
