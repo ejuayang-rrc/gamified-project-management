@@ -24,7 +24,7 @@ function starDifficulty() {
 
             console.log(difficultyRating[count]);
             if (paragraphDifficulty?.textContent) {
-                paragraphDifficulty.textContent = `Difficulty: ${difficultyRating[count]}`;
+                paragraphDifficulty.textContent = `Difficulty: ${(difficultyRating[count]).charAt(0).toUpperCase() + (difficultyRating[count].slice(1))}`;
             }
         }
     });
