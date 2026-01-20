@@ -1,15 +1,13 @@
+import NavDesktop from "./children/NavDesktop";
+import NavMobile from "./children/NavMobile";
 import "./Nav.css";
 
 function Nav() {
   return(
-    <nav>
-      <span>
-        <a href="#">Home</a>
-        <a href="#">Placeholder</a>
-        <a href="#">Options</a>
-        <a href="#">Account</a>
-      </span>
-    </nav>
+    <div className="nav-element">
+      <NavDesktop />
+      <NavMobile />
+    </div>
   );
 }
 
