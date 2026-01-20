@@ -5,3 +5,39 @@
     max-width: 50rem;
     justify-items: center; 
 }
+
+.easy {
+    color: green;
+}
+
+.easy-medium {
+    color: rgb(2, 194, 2);
+}
+
+.medium {
+    color: lime;
+}
+
+.medium-intermediate {
+    color: rgb(134, 255, 134);
+}
+
+.intermediate {
+    color: yellow;
+}
+
+.intermediate-hard {
+    color: rgb(206, 206, 1);
+}
+
+.hard {
+    color: orange;
+}
+
+.hard-difficult {
+    color: rgb(182, 119, 2);
+}
+
+.difficult {
+    color: red;
+}
