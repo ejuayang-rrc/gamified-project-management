@@ -1,0 +1,73 @@
+.task-container {
+    background-color: #ffffff;
+    box-shadow: 0.35rem 0.35rem #545454;
+    border: 0.1rem solid rgb(217, 216, 216);
+    border-radius: 12px;
+    padding: 2rem 2rem;
+    max-width: 20rem;
+    color: black;
+    text-align: left;
+    margin: 0;
+
+}
+
+.task-container h1 {
+    margin: 0;
+}
+
+#star {
+    padding: 0 1rem 0 0;
+}
+
+.task-description-container {
+    /* background-color: #9fc2b2; */
+    border-radius: 9px;
+    color: #545454;
+}
+
+.task-header-container {
+    display: flex;
+    justify-content: space-between;
+    /* padding-right: 1rem; */
+}
+
+.task-header-container p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.easy {
+    color: green;
+}
+
+.easy-medium {
+    color: rgb(2, 194, 2);
+}
+
+.medium {
+    color: lime;
+}
+
+.medium-intermediate {
+    color: rgb(134, 255, 134);
+}
+
+.intermediate {
+    color: yellow;
+}
+
+.intermediate-hard {
+    color: rgb(206, 206, 1);
+}
+
+.hard {
+    color: orange;
+}
+
+.hard-difficult {
+    color: rgb(182, 119, 2);
+}
+
+.difficult {
+    color: red;
+}
