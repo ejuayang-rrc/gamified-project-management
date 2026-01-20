@@ -13,7 +13,7 @@ function TaskCard() {
                     <h1>Sample Task</h1>
                     <p>&#8942;</p> {/** TEMPORARY */}
                 </div>
-                    <div id="star">
+                    <div className="star">
                         &#9733;  &#9733;  &#9733;  &#9733;
                     </div>
                 <div className="task-description-container">
