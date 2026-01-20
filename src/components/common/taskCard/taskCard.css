@@ -6,22 +6,38 @@
     justify-items: center; 
 }
 
-.green-star {
+.easy {
     color: green;
 }
 
-.lime-star {
+.easy-medium {
+    color: rgb(2, 194, 2);
+}
+
+.medium {
     color: lime;
 }
 
-.yellow-star {
+.medium-intermediate {
+    color: rgb(134, 255, 134);
+}
+
+.intermediate {
     color: yellow;
 }
 
-.orange-star {
+.intermediate-hard {
+    color: rgb(206, 206, 1);
+}
+
+.hard {
     color: orange;
 }
 
-.red-star {
+.hard-difficult {
+    color: rgb(182, 119, 2);
+}
+
+.difficult {
     color: red;
 }

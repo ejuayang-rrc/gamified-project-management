@@ -1,39 +1,9 @@
 // use props later to pass task info
 import "./taskCard.css"
 
-interface taskDifficulty {
-    [key: number] : string
-};
-
-const difficultyRating: taskDifficulty = {
-    1: "green-star", 
-    2: "lime-star", 
-    3: "yellow-star", 
-    4: "orange-star", 
-    5: "red-star"
-};
-
-function starDifficulty() {
-    const stars = document.querySelectorAll('#star');
-
-    stars.forEach(star => {
-
-        let count: number = 0;
-
-        const starContext = star.textContent.split("");
-
-        for (let i = 0; i < starContext.length; i++) {
-            if (starContext[i] === "★") {
-                count++;
-            }
-        }
+import starDifficulty from "../starRating/starRating";
 
 
-        if (Object.prototype.hasOwnProperty.call(difficultyRating, count)) {
-            star.classList.add(difficultyRating[count])
-        }
-    })
-}
 
 starDifficulty();
 
@@ -43,7 +13,7 @@ function TaskCard() {
             <div className="task-container">
                 {/*prop passed to fill  */}
                 <h1>Task Title</h1>
-                <div id="star">
+                <div className="star">
                     &#9733;
                 </div>
                 <div className="task-description-container">
@@ -58,14 +28,14 @@ function TaskCard() {
                     {/*prop passed to fill  */}
                     <p>Assignee Name: Lorem Ipsum</p>
                     {/*prop passed to fill  */}
-                    <p>Difficulty: Lorem Ipsum</p>
+                    <p id="difficulty">Difficulty:</p>
                 </div>
                 
             </div>
             <div className="task-container">
                 {/*prop passed to fill  */}
                 <h1>Task Title</h1>
-                <div id="star">
+                <div className="star">
                     &#9733; &#9733; &#9733;
                 </div>
                 <div className="task-description-container">
@@ -80,13 +50,13 @@ function TaskCard() {
                     {/*prop passed to fill  */}
                     <p>Assignee Name: Lorem Ipsum</p>
                     {/*prop passed to fill  */}
-                    <p>Difficulty: Lorem Ipsum</p>
+                    <p id="difficulty">Difficulty:</p>
                 </div>
             </div>
             <div className="task-container">
                 {/*prop passed to fill  */}
                 <h1>Task Title</h1>
-                <div id="star">
+                <div className="star">
                     &#9733; &#9733; &#9733; &#9733; &#9733;
                 </div>
                 <div className="task-description-container">
@@ -101,7 +71,7 @@ function TaskCard() {
                     {/*prop passed to fill  */}
                     <p>Assignee Name: Lorem Ipsum</p>
                     {/*prop passed to fill  */}
-                    <p>Difficulty: Lorem Ipsum</p>
+                    <p id="difficulty">Difficulty:</p>
                 </div>
             </div>
         </div>
