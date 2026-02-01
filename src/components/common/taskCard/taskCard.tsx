@@ -25,7 +25,12 @@ function TaskCard() {
                     flex
                     justify-between
                 ">
-                    <h1 className="m-0">Sample Task</h1>
+                    <h1 className="
+                    m-0
+                    text-2xl
+                    ">
+                        Sample Task
+                    </h1>
                     <p>&#8942;</p> {/** TEMPORARY */}
                 </div>
                     <div className="star">
@@ -38,7 +43,9 @@ function TaskCard() {
                     {/*prop passed to fill  */}
                     <p className="
                         m-0
-                        text-2xl
+                        text-1xl
+                        pb-2
+                        pt-2
                     ">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Integer sed elit tempor, sodales massa eu, venenatis neque. 
