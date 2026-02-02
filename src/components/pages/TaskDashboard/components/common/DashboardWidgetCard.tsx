@@ -20,3 +20,5 @@ const DashboardWidgetCard = ({widgetTitle, children}: DashboardWidgetCardProps) 
         </div>
     )
 }
+
+export default DashboardWidgetCard;
