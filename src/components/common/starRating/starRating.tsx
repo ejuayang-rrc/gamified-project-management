@@ -4,14 +4,26 @@ type starDifficulty = {
     star: starType
 }
 
-export default function StarRating({star: {starCount, difficulty}}: starDifficulty) {
+interface ofDifficulty {
+    [key: number | string]: string;
+}
+
+const difficultyRating: ofDifficulty = {
+    1: "easy",
+    2: "medium",
+    3: "intermediate",
+    4: "hard",
+    5: "difficult"
+}
+
+export default function StarRating({star: {difficulty}}: starDifficulty) {
     let stars = "";
+
+    const starCount = Number(Object.keys(difficultyRating).find(key => difficultyRating[key] === difficulty))
 
     for (let i = 0; i < starCount; i++) {
         if (i < starCount) {
             stars += "★";
-        } else {
-            stars += "☆";
         }
     }
 

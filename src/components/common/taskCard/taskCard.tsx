@@ -6,7 +6,7 @@ import StarRating from "../starRating/starRating";
 import type { starType } from "../starRating/models/starType";
 
 function TaskCard() {
-    const [stars] = useState<starType>({starCount: 4, difficulty: "hard"});
+    const [stars] = useState<starType>({difficulty: "hard"});
 
     return (
             <div
