@@ -1,11 +1,13 @@
 // use props later to pass task info
 import "./taskCard.css"
+import { useState } from "react";
 
-import starDifficulty from "../starRating/starRating";
-
-starDifficulty();
+import StarRating from "../starRating/starRating";
+import type { starType } from "../starRating/models/starType";
 
 function TaskCard() {
+    const [stars] = useState<starType>({starCount: 4, difficulty: "hard"});
+
     return (
             <div
                 className="
@@ -33,9 +35,9 @@ function TaskCard() {
                     </h1>
                     <p>&#8942;</p> {/** TEMPORARY */}
                 </div>
-                    <div className="star">
-                        &#9733;  &#9733;  &#9733;  &#9733;
-                    </div>
+                <StarRating
+                star={stars}
+                />
                 <div className="
                     rounded-[9px]
                     text-[#545454]
