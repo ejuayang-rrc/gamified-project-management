@@ -25,6 +25,10 @@ const DepartmentDashboard = () => {
         ])
     }
 
+    const removeDepartmentAtIndex = (index: number) => {
+        setDepartments(prev => prev.filter((_, i) => i !== index));
+    }
+
     return (
         <main>
             {/* Outer page wrapper */}
@@ -112,6 +116,7 @@ const DepartmentDashboard = () => {
                         <section className="flex-1 pl-6">
                             <DepartmentList
                             departments={departments}
+                            departmentIndex={removeDepartmentAtIndex}
                             />
                             <DepartmentForm
                             selectedDepartment={selectedDepartment}
