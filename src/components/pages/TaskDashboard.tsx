@@ -19,6 +19,7 @@ const TaskDashboard = () => {
                 p-4
                 flex
                 flex-col
+                overflow-hidden
                 ">
 
                 {/* Page wrapper */}
@@ -28,9 +29,10 @@ const TaskDashboard = () => {
                     w-full
                     flex-1
                     flex
+                    min-h-0
                 ">
                     {/* Content wrapper for a horizontal layout */}
-                    <div className="flex w-full flex-1">
+                    <div className="flex w-full flex-1 min-h-0">
 
                         {/* Sidebar placeholder */}
                         {/* Copy this layout into reusable nav TODAY */}
@@ -93,10 +95,20 @@ const TaskDashboard = () => {
                         </aside>
 
                         {/* Main dashboard content */}
-                        <section className="flex-1 pl-6">
+                        <section className="
+                            w-full
+                            flex-1
+                            min-h-0
+                            pl-6
+                            flex
+                            flex-col
+                            px-8
+                            pb-6
+                            pt-6
+                        ">
                             <DisplayWidgets
-                            view={view}
-                            setView={setView}
+                                view={view}
+                                setView={setView}
                             />
                         </section>
                     </div>

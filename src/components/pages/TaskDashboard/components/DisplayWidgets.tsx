@@ -17,11 +17,13 @@ const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
     return (
         <section className="
             w-full
+            flex
+            flex-col
+            flex-1
+            min-h-0
             pt-6
             pb-6
             px-8
-            flex
-            flex-col
         ">
             <h1 className="
                 text-2xl
@@ -38,53 +40,50 @@ const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
                 w-full
                 bg-white/10
             "/>
-            
-            {/* Div for the top half of the widgets. */}
-            {/* TOP GRID */}
-            <div className="
-                grid
-                grid-cols-3
-                gap-4
-                mt-4
-                items-stretch
-            ">
-                {/* LEFT GRID */}
-                <div className="col-span-1">
-                    <ChangeViewWidget
-                        view={view}
-                        setView={setView}
-                    />
-                </div>
+            <div className="flex-1 min-h-0" >
 
-                {/* RIGHT GRID */}
-                <div className="col-span-2">
-                    {view === "overview" && (
-                    <div className="
-                        grid
-                        grid-cols-2
-                        gap-4 
-                        auto-rows-fr
-                    ">
-                        <WidgetTwo />
-                        <WidgetThree />
-                        <WidgetFour />
-                        <WidgetSix />
+                {/* Div for the top half of the widgets. */}
+                {/* TOP GRID */}
+                <div className="
+                    grid
+                    grid-cols-3
+                    gap-4
+                    mt-4
+                    items-start
+                ">
+                    {/* LEFT GRID */}
+                    <div className="col-span-1">
+                        <ChangeViewWidget
+                            view={view}
+                            setView={setView}
+                        />
                     </div>
-                    )}
+
+                    {/* RIGHT GRID */}
+                    <div className="col-span-2">
+                        {view === "overview" && (
+                        <div className="
+                            grid
+                            grid-cols-2
+                            gap-4 
+                            auto-rows-fr
+                        ">
+                            <WidgetTwo />
+                            <WidgetThree />
+                            <WidgetFour />
+                            <WidgetSix />
+                        </div>
+                        )}
+                    </div>
                 </div>
             </div>
 
             {/* Div for the bottom half of the widgets. */}
-            <div className="
-                grid
-                grid-cols-1
-                gap-4
-                mt-4
-            ">
-                <div>
+            <div className="h-6"/>
+    
+                <div className="flex-1 min-h-0">
                     <MyTasksWidget />
                 </div>
-            </div>
         </section>
     )
 };
