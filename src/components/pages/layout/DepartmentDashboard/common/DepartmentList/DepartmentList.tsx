@@ -2,6 +2,7 @@ import type { DepartmentType } from "../../types/DepartmentType"
 
 type DepartmentListDisplayProps = {
     departments: DepartmentType[];
+    departmentIndex: (index: number) => void;
 }
 
 // The 0 in the task count is temporarly until we actually settle for how we would manage our data and figure out how we log completion/task completion.
