@@ -4,11 +4,42 @@ import { useState } from "react";
 // Type for different views, move into type folder
 export type DashboardViewOptions = "overview" | "myTasks";
 
+// Type for a TASK. MOVE to a types folder later
+// NOTE: id, description, and completed are CREATED when a task is made
+// BUT: State is NOT reflected in the UI.
+export type Task = {
+    id: string;
+    title: string;
+    description: string;
+    completed: boolean;
+}
+
 const TaskDashboard = () => {
 
     // State to handle dashboard views
     const [ view, setView ] = useState<DashboardViewOptions>("overview");
 
+    // State to handle adding tasks
+    const [ tasks, setTasks ] = useState<Task[]>([]);
+
+    // Callback passed to DisplayWidgets to add tasks
+    const addTask = (title: string, description: string) => {
+        const newTask: Task = {
+            id: crypto.randomUUID(),
+            title,
+            description,
+            completed: false,
+    };
+        
+        setTasks((prevTasks) => [...prevTasks, newTask]);
+
+    };
+
+    // Callback passed to DisplayWidgets to remove tasks
+    const removeTasks = (id: string) => {
+        setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+    };
+    
     return (
         <main>
             {/* Outer page wrapper */}
@@ -109,6 +140,9 @@ const TaskDashboard = () => {
                             <DisplayWidgets
                                 view={view}
                                 setView={setView}
+                                tasks={tasks}
+                                addTask={addTask}
+                                removeTask={removeTasks}
                             />
                         </section>
                     </div>

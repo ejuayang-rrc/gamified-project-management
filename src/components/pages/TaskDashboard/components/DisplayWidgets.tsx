@@ -1,19 +1,22 @@
 import ChangeViewWidget from "./widgets/ChangeViewWidget";
-import WidgetTwo from "./widgets/WidgetTwo";
 import WidgetThree from "./widgets/WidgetThree";
 import WidgetFour from "./widgets/WidgetFour";
 import WidgetSix from "./widgets/WidgetSix";
 import MyTasksWidget from "./widgets/MyTasksWidget";
-import type { DashboardViewOptions } from "../../TaskDashboard";
+import type { DashboardViewOptions, Task } from "../../TaskDashboard";
+import CreateTaskWidget from "./widgets/CreateTaskWidget";
 
 type DashboardViewProps = {
     view: DashboardViewOptions;
     setView: (view: DashboardViewOptions) => void;
+    addTask: (title: string, description: string) => void;
+    removeTask: (id: string) => void;
+    tasks: Task[];
 }
 
 // Displays all of the widgets on the dashboard
 // If more widgets get added, update grid layout
-const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
+const DisplayWidgets = ({ view, setView, tasks, addTask, removeTask }: DashboardViewProps) => {
     return (
         <section className="
             w-full
@@ -28,7 +31,6 @@ const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
             <h1 className="
                 text-2xl
                 font-bold
-                text-white
                 tracking-tight
                 pb-2
             ">
@@ -65,7 +67,7 @@ const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
                             auto-rows-fr
                             h-full
                         ">
-                            <WidgetTwo />
+                            <CreateTaskWidget addTask={addTask} />
                             <WidgetThree />
                             <WidgetFour />
                             <WidgetSix />
@@ -79,7 +81,7 @@ const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
             <div className="h-6"/>
     
                 <div className="flex-1 min-h-0">
-                    <MyTasksWidget />
+                    <MyTasksWidget tasks={tasks} removeTask={removeTask} />
                 </div>
         </section>
     )
