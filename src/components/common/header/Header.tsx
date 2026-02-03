@@ -1,7 +1,7 @@
 import "./Header.css";
 
 function Header() {
-    return(<header>
+    return(<header className="text-center">
         Gamified Project Management App
     </header>);
 }

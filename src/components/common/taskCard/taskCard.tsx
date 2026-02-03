@@ -1,24 +1,54 @@
 // use props later to pass task info
 import "./taskCard.css"
+import { useState } from "react";
 
-import starDifficulty from "../starRating/starRating";
-
-starDifficulty();
+import StarRating from "../starRating/starRating";
+import type { starType } from "../starRating/models/starType";
 
 function TaskCard() {
+    const [stars] = useState<starType>({difficulty: "hard"});
+
     return (
-            <div className="task-container">
+            <div
+                className="
+                    bg-white
+                    shadow-[0.35rem_0.35rem_#545454]
+                    border border-[rgb(217,216,216)]
+                    rounded-[12px]
+                    p-8
+                    max-w-[20rem]
+                    text-black
+                    text-left
+                    m-0
+                
+            ">
                 {/*prop passed to fill  */}
-                <div className="task-header-container">
-                    <h1>Sample Task</h1>
+                <div className="
+                    flex
+                    justify-between
+                ">
+                    <h1 className="
+                    m-0
+                    text-2xl
+                    ">
+                        Sample Task
+                    </h1>
                     <p>&#8942;</p> {/** TEMPORARY */}
                 </div>
-                    <div className="star">
-                        &#9733;  &#9733;  &#9733;  &#9733;
-                    </div>
-                <div className="task-description-container">
+                <StarRating
+                star={stars}
+                />
+                <div className="
+                    rounded-[9px]
+                    text-[#545454]
+                ">
                     {/*prop passed to fill  */}
-                    <p>
+                    <p className="
+                        m-0
+                        text-1xl
+                        pb-2
+                        pt-2
+                    ">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Integer sed elit tempor, sodales massa eu, venenatis neque. 
                         In hac habitasse platea dictumst. 
