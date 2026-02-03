@@ -1,6 +1,14 @@
 import DisplayWidgets from "./TaskDashboard/components/DisplayWidgets";
+import { useState } from "react";
+
+// Type for different views, move into type folder
+type DashboardViewOptions = "overview" | "myTasks";
 
 const TaskDashboard = () => {
+
+    // State to handle dashboard views
+    const [ view, setView ] = useState<DashboardViewOptions>("overview");
+
     return (
         <main>
             {/* Outer page wrapper */}
