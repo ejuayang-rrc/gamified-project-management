@@ -1,4 +1,4 @@
-.task-container {
+/* .task-container {
     background-color: #ffffff;
     box-shadow: 0.35rem 0.35rem #545454;
     border: 0.1rem solid rgb(217, 216, 216);
@@ -9,32 +9,30 @@
     text-align: left;
     margin: 0;
 
-}
+} */
 
-.task-container h1 {
+/* .task-container h1 {
     margin: 0;
-}
+} */
 
 #star {
     padding: 0 1rem 0 0;
 }
 
-.task-description-container {
-    /* background-color: #9fc2b2; */
+/* .task-description-container {
     border-radius: 9px;
     color: #545454;
-}
+} */
 
-.task-header-container {
+/* .task-header-container {
     display: flex;
     justify-content: space-between;
-    /* padding-right: 1rem; */
-}
+} */
 
-.task-header-container p {
+/* .task-header-container p {
     margin: 0;
     font-size: 1.5rem;
-}
+} */
 
 .easy {
     color: green;

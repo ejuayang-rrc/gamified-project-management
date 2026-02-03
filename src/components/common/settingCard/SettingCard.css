@@ -1,0 +1,9 @@
+.setting-card {
+  max-width: 100%;
+}
+
+.setting-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
