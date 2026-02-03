@@ -4,14 +4,24 @@ import WidgetThree from "./widgets/WidgetThree";
 import WidgetFour from "./widgets/WidgetFour";
 import WidgetSix from "./widgets/WidgetSix";
 import MyTasksWidget from "./widgets/MyTasksWidget";
+import type { DashboardViewOptions } from "../../TaskDashboard";
 
-const DisplayWidgets = () => {
+type DashboardViewProps = {
+    view: DashboardViewOptions;
+    setView: (view: DashboardViewOptions) => void;
+}
+
+// Displays all of the widgets on the dashboard
+// If more widgets get added, update grid layout
+const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
     return (
         <section className="
             w-full
             pt-6
             pb-6
             px-8
+            flex
+            flex-col
         ">
             <h1 className="
                 text-2xl
@@ -30,28 +40,47 @@ const DisplayWidgets = () => {
             "/>
             
             {/* Div for the top half of the widgets. */}
-            <div className="grid grid-cols-3 gap-4 mb-4 mt-4">
-                <div>
-                    <ChangeViewWidget />
-                </div>
-                <div>
-                    <WidgetTwo />
-                </div>
-                <div>
-                    <WidgetThree />
-                </div>
-
-                <div>
-                    <WidgetFour />
-                </div>
-                <div>
-                    <WidgetSix />
+            {/* TOP GRID */}
+            <div className="
+                grid
+                grid-cols-3
+                gap-4
+                mt-4
+                items-stretch
+            ">
+                {/* LEFT GRID */}
+                <div className="col-span-1">
+                    <ChangeViewWidget
+                        view={view}
+                        setView={setView}
+                    />
                 </div>
 
+                {/* RIGHT GRID */}
+                <div className="col-span-2">
+                    {view === "overview" && (
+                    <div className="
+                        grid
+                        grid-cols-2
+                        gap-4 
+                        auto-rows-fr
+                    ">
+                        <WidgetTwo />
+                        <WidgetThree />
+                        <WidgetFour />
+                        <WidgetSix />
+                    </div>
+                    )}
+                </div>
             </div>
 
             {/* Div for the bottom half of the widgets. */}
-            <div className="grid grid-cols-1 gap-4">
+            <div className="
+                grid
+                grid-cols-1
+                gap-4
+                mt-4
+            ">
                 <div>
                     <MyTasksWidget />
                 </div>

@@ -2,7 +2,7 @@ import DisplayWidgets from "./TaskDashboard/components/DisplayWidgets";
 import { useState } from "react";
 
 // Type for different views, move into type folder
-type DashboardViewOptions = "overview" | "myTasks";
+export type DashboardViewOptions = "overview" | "myTasks";
 
 const TaskDashboard = () => {
 
@@ -94,7 +94,10 @@ const TaskDashboard = () => {
 
                         {/* Main dashboard content */}
                         <section className="flex-1 pl-6">
-                            <DisplayWidgets />
+                            <DisplayWidgets
+                            view={view}
+                            setView={setView}
+                            />
                         </section>
                     </div>
                 </div>
