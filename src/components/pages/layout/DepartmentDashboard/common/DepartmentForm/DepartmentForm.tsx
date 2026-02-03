@@ -1,29 +1,28 @@
 import { useState } from "react";
 
 type DepartmentFormProps = {
-    departments: string[];
     selectedDepartment: string;
-    setSelectedDepartment: React.Dispatch<React.SetStateAction<string>>;
-    addDepartment: (departmentName: string) => void;
+    addDepartment: (departmentName: string, employeeCount: number, taskCount: number) => void;
 }
 
 export default function DepartmentForm({
-    selectedDepartment,
     addDepartment
     }: DepartmentFormProps) {
     
         const [departmentName, setDepartmentName] = useState<string>("");
         const [error, setError] = useState<string>("");
+        const [employeeCount] = useState<number>(0);
+        const [taskCount] = useState<number>(0);
 
         const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
             e.preventDefault();
 
-            if (departmentName.trim().length > 5) {
+            if (departmentName.trim().length < 5) {
                 setError("The department name should be at least 5 letters long.");
                 return;
             }
 
-            addDepartment(selectedDepartment);
+            addDepartment(departmentName, employeeCount, taskCount);
             setDepartmentName("");
             setError("");
         };
