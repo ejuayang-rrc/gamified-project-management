@@ -47,10 +47,12 @@ const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
                 <div className="grid grid-cols-3 gap-4 h-full items-stretch">
                     {/* LEFT GRID */}
                     <div className="col-span-1 self-start">
-                        <ChangeViewWidget
-                            view={view}
-                            setView={setView}
-                        />
+                        <div className="inline-flex">
+                            <ChangeViewWidget
+                                view={view}
+                                setView={setView}
+                            />
+                        </div>
                     </div>
 
                     {/* RIGHT GRID */}

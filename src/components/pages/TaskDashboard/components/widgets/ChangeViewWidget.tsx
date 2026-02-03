@@ -9,7 +9,7 @@ type DashboardViewProps = {
 const ChangeViewWidget = ({ setView }: DashboardViewProps) => {
     return (
         <DashboardWidgetCard widgetTitle="View">
-            <form className="flex gap-2">
+            <form className="flex gap-2 flex-col">
                 <button
                     type="button"
                     onClick={() => setView("overview")}
