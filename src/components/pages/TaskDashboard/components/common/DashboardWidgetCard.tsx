@@ -9,9 +9,15 @@ type DashboardWidgetCardProps = {
 const DashboardWidgetCard = ({widgetTitle, children}: DashboardWidgetCardProps) => {
 
     return (
-        <div className="">
+        <div className="
+            rounded-2xl
+            border
+            border-white/10
+            bg-white/5
+            p-5
+        ">
             
-            <div>
+            <div className="">
                 <h3>{widgetTitle}</h3>
             </div>
             {/* Will render the content depending on the widget. */}

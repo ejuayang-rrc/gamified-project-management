@@ -7,16 +7,25 @@ import MyTasksWidget from "./widgets/MyTasksWidget";
 
 const DisplayWidgets = () => {
     return (
-        <section>
+        <section className="
+            w-full
+            pt-6
+            pb-6
+            px-8
+        ">
             <h1 className="
                 text-2xl
                 font-bold
                 text-white
+                tracking-tight
+                pb-2
             ">
-                Task Dashboard</h1>
+                Task Dashboard
+            </h1>
 
             <div className="
                 h-px
+                w-full
                 bg-white/10
             "/>
             
