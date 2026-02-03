@@ -9,7 +9,7 @@ type DashboardWidgetCardProps = {
 const DashboardWidgetCard = ({widgetTitle, children}: DashboardWidgetCardProps) => {
 
     return (
-        <div>
+        <div className="">
             
             <div>
                 <h3>{widgetTitle}</h3>

@@ -1,9 +1,9 @@
-import WidgetOne from "./widgets/WidgetOne";
+import ChangeViewWidget from "./widgets/ChangeViewWidget";
 import WidgetTwo from "./widgets/WidgetTwo";
 import WidgetThree from "./widgets/WidgetThree";
 import WidgetFour from "./widgets/WidgetFour";
 import WidgetSix from "./widgets/WidgetSix";
-import WidgetSeven from "./widgets/WidgetSeven";
+import MyTasksWidget from "./widgets/MyTasksWidget";
 
 const DisplayWidgets = () => {
     return (
@@ -21,9 +21,9 @@ const DisplayWidgets = () => {
             "/>
             
             {/* Div for the top half of the widgets. */}
-            <div>
+            <div className="grid grid-cols-3 gap-4 mb-4 mt-4">
                 <div>
-                    <WidgetOne />
+                    <ChangeViewWidget />
                 </div>
                 <div>
                     <WidgetTwo />
@@ -31,10 +31,6 @@ const DisplayWidgets = () => {
                 <div>
                     <WidgetThree />
                 </div>
-            </div>
-
-            {/* Div for the bottom half of the widgets. */}
-            <div>
 
                 <div>
                     <WidgetFour />
@@ -42,8 +38,13 @@ const DisplayWidgets = () => {
                 <div>
                     <WidgetSix />
                 </div>
+
+            </div>
+
+            {/* Div for the bottom half of the widgets. */}
+            <div className="grid grid-cols-1 gap-4">
                 <div>
-                    <WidgetSeven />
+                    <MyTasksWidget />
                 </div>
             </div>
         </section>
