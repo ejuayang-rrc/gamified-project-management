@@ -1,7 +1,7 @@
 import { MdCheckBox, MdCheckBoxOutlineBlank } from "react-icons/md";
 import type { UserSetting } from "../../types/setting";
 
-export function SettingCard(
+export function SettingCard (
   {
     setting, 
     isExpanded, 
@@ -16,8 +16,8 @@ export function SettingCard(
   }
 ) {
   return (
-  <div className="card">
-    <div className="card-top">
+  <div className="setting-card">
+    <div className="setting-card-top">
       <h3 onClick={onTitleClick}>{setting.name}</h3>
 
       <button onClick={onSaveClick}>
@@ -25,7 +25,7 @@ export function SettingCard(
       </button>
     </div>
 
-    { isExpanded ? <p>{setting.description}</p> : null }
+    { isExpanded ? <p className="setting-description">{setting.description}</p> : null }
   </div>
   );
 }

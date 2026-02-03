@@ -12,6 +12,13 @@ export function SettingsDisplay({
 }) {
   const [expandedTerm, setExpandedTerm] = useState<string|null>(null);
   
+  /* 
+    Will have to tie this to the Settings.tsx file in the pages folder
+    once we get Tailwind going. These settings rely on changing 
+    stylings, and if I do CSS right now I can't be bothered to 
+    translate all of it to Tailwind.
+  */ 
+
   const handleSettingsClick = (settingClicked: UserSetting): void => {
     updateSettings(prevState => {
       return prevState.map(s => {

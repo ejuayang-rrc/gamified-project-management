@@ -1,8 +1,8 @@
-.card {
+.setting-card {
   max-width: 100%;
 }
 
-.card-top {
+.setting-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
