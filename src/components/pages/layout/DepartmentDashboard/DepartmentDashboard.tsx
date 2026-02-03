@@ -113,14 +113,18 @@ const DepartmentDashboard = () => {
                         </aside>
 
                         {/* Main dashboard content */}
-                        <section className="flex-1 pl-6">
-                            <DepartmentList
-                            departments={departments}
-                            departmentIndex={removeDepartmentAtIndex}
-                            />
-                            <DepartmentForm
-                            selectedDepartment={selectedDepartment}
-                            addDepartment={addDepartment}/>
+                        <section className="flex-1 p-6 flex flex-col">
+                            <div className="flex-1 overflow-y-auto min-h-0">
+                                <DepartmentList
+                                departments={departments}
+                                departmentIndex={removeDepartmentAtIndex}
+                                />
+                            </div >
+                            <div className="mt-6 border-t border-white/10 pt-6">
+                                <DepartmentForm
+                                selectedDepartment={selectedDepartment}
+                                addDepartment={addDepartment}/>
+                            </div>
                         </section>
                     </div>
                 </div>
