@@ -3,7 +3,7 @@ import Footer from "../../common/footer/Footer";
 import { Outlet } from "react-router";
 
 // Layout To be used for each page.
-const Layout = ({}) => {
+const Layout = () => {
 
     return (
         <>
