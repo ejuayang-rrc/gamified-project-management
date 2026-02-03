@@ -4,7 +4,8 @@ type DepartmentListDisplayProps = {
     departments: DepartmentType[];
 }
 
-export default function DepartmentDashboardDisplay ({departments,} : DepartmentListDisplayProps) {
+// The 0 in the task count is temporarly until we actually settle for how we would manage our data and figure out how we log completion/task completion.
+export default function DepartmentList ({departments,} : DepartmentListDisplayProps) {
     return (
         <>
             <div>
