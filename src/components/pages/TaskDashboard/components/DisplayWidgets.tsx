@@ -40,19 +40,13 @@ const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
                 w-full
                 bg-white/10
             "/>
-            <div className="flex-1 min-h-0" >
+            <div className="flex-1 min-h-0 mt-4" >
 
                 {/* Div for the top half of the widgets. */}
                 {/* TOP GRID */}
-                <div className="
-                    grid
-                    grid-cols-3
-                    gap-4
-                    mt-4
-                    items-start
-                ">
+                <div className="grid grid-cols-3 gap-4 h-full items-stretch">
                     {/* LEFT GRID */}
-                    <div className="col-span-1">
+                    <div className="col-span-1 self-start">
                         <ChangeViewWidget
                             view={view}
                             setView={setView}
@@ -67,6 +61,7 @@ const DisplayWidgets = ({ view, setView }: DashboardViewProps) => {
                             grid-cols-2
                             gap-4 
                             auto-rows-fr
+                            h-full
                         ">
                             <WidgetTwo />
                             <WidgetThree />
