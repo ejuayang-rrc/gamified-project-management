@@ -17,8 +17,8 @@ export default function DepartmentList ({departments,} : DepartmentListDisplayPr
                             <th>Employee Count</th>
                             <th>Task/Completed</th>
                         </tr>
-                        {departments.map(({departmentName, employeeCount, taskCount}) => (
-                            <tr key={departmentName}>
+                        {departments.map(({departmentName, employeeCount, taskCount}, index) => (
+                            <tr key={index}>
                                 <td>{departmentName}</td>
                                 <td>{employeeCount}</td>
                                 <td>0/{taskCount}</td>
