@@ -1,5 +1,5 @@
 import type { Group } from "../types/groupType";
-
+import { groupData } from "./mockGroupData";
 
 // Get all groups attached to an organization
 export function fetchGroups(): Group[] {
@@ -29,7 +29,7 @@ export function getGroupById(groupId: string): Group {
 }
 
 // Updates a group, ensures to get the group's id first
-export async function updateGroup(group: Group): Promise<void> {
+export async function updateGroup(group: Group): Promise<Group> {
     const foundGroupIndex = groupData.findIndex((g) => g.id === group.id);
 
     if (foundGroupIndex === -1) {
@@ -42,7 +42,7 @@ export async function updateGroup(group: Group): Promise<void> {
 
 // Deletes a group using its id
 export function deleteGroup(groupId: string): void {
-    const foundGroup = groupData.find((g) => g.id === groupId);
+    const foundGroup = groupData.findIndex((g) => g.id === groupId);
 
     if (foundGroup === -1) {
             throw new Error(`Failed to delete group with id ${groupId}`);
