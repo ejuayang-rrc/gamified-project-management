@@ -1,12 +1,10 @@
 import DashboardWidgetCard from "../common/DashboardWidgetCard"
-import type { Task } from "../../../../../types/taskType";
+import { useTasks } from "../../../../../hooks/useTasks";
 
-type MyTasksWidgetProps = {
-  tasks: Task[];
-  removeTask: (id: string) => void;
-};
+const MyTasksWidget = () => {
 
-const MyTasksWidget = ({ tasks, removeTask }: MyTasksWidgetProps) => {
+    // uses the custom task hook to access task data
+    const { tasks, deleteTask } = useTasks();
 
     return (
         <DashboardWidgetCard widgetTitle="My Tasks">
@@ -15,7 +13,14 @@ const MyTasksWidget = ({ tasks, removeTask }: MyTasksWidgetProps) => {
             No tasks yet. Create one above.
             </p>
         ) : (
-            <div className="flex flex-col gap-2 pr-1">
+            <div className="
+                flex
+                flex-col
+                gap-2
+                pr-1
+                h-full
+                overflow-y-auto
+            ">
             {tasks.map((task) => (
                 <div
                     key={task.id}
@@ -41,7 +46,9 @@ const MyTasksWidget = ({ tasks, removeTask }: MyTasksWidgetProps) => {
 
                 <button
                     type="button"
-                    onClick={() => removeTask(task.id)}
+                    // only delete task if id is not null
+                    // weird implementation, since there isn't any validation currently.
+                    onClick={() => task.id != null && deleteTask(task.id)}
                     className="
                     h-8
                     px-3

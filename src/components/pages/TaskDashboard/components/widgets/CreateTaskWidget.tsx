@@ -1,11 +1,9 @@
 import { useState } from "react";
 import DashboardWidgetCard from "../common/DashboardWidgetCard";
+import { useTasks } from "../../../../../hooks/useTasks";
 
-type CreateTaskWidgetProps = {
-  addTask: (title: string, description: string) => void;
-};
-
-const CreateTaskWidget = ({ addTask }: CreateTaskWidgetProps) => {
+const CreateTaskWidget = () => {
+  const { createTask } = useTasks();
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
 
@@ -18,8 +16,7 @@ const CreateTaskWidget = ({ addTask }: CreateTaskWidgetProps) => {
                 if (!title.trim() || !description.trim()) {
                     return;
                 }
-
-                addTask(title, description);
+                createTask({ title: title.trim(), description: description.trim(), completed: false });
                 setTitle("");
                 setDescription("");
                 }}
