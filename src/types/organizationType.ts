@@ -1,5 +1,5 @@
 export type Organization = {
     id: number,
-    title: string,
+    name: string,
     groups: number[]
 }
