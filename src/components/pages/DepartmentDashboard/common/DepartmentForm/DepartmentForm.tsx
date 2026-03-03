@@ -1,9 +1,5 @@
 import { useState } from "react";
-
-type DepartmentFormProps = {
-    selectedDepartment: string;
-    addDepartment: (departmentName: string, employeeCount: number, taskCount: number) => void;
-}
+import type { DepartmentFormProps } from "../../types/DepartmentFormProps";
 
 export default function DepartmentForm({
     addDepartment
