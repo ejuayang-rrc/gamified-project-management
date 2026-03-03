@@ -1,5 +1,8 @@
 import type { Group } from "../types/groupType";
 
+
+//RB - I followed the naming conventions of "Group" like on the kanban, but it is actually departments.
+//RB - Will change in the future
 export const groupData: Group[] = [
 {
     id: "1",
