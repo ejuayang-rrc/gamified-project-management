@@ -6,7 +6,7 @@ export async function fetchOrg() {
   return orgData;
 }
 
-export async function manageGroupInOrg(
+export async function orgAddOrRemoveGroup(
   orgId: number,
   groupId: number
 ) {
