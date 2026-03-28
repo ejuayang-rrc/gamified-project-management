@@ -10,6 +10,7 @@ export const mainNavTopLinks: DashboardNavLink[] = [
   { to: "/", label: "Home" },
   { to: "/task-dashboard", label: "Task Dashboard" },
   { to: "/department-dashboard", label: "Department Dashboard" },
+  { to: "/org-dashboard", label: "Organizations" },
 ];
 
 export const mainNavBottomLinks: DashboardNavLink[] = [
