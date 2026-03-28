@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { Organization } from "../types/organizationType";
 import * as OrgService from "../services/orgService";
 
-export function fetchOrgs() {
+export function manageOrgs() {
   const [orgs, updateOrgs] = useState<Organization[]>([]);
   const [response, setResponse] = useState<string | null>();
 
