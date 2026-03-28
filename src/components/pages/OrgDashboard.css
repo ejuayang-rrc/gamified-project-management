@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+.outer-page-wrapper {
+  @apply 
+  min-h-screen 
+  w-full 
+  bg-zinc-900 
+  p-4 
+  flex 
+  flex-col 
+  overflow-hidden
+}
+
+.page-wrapper {
+  @apply 
+  rounded-3xl 
+  bg-zinc-950 
+  w-full flex-1 
+  flex 
+  min-h-0
+}
+
+.horizontal-wrapper {
+  @apply 
+  flex 
+  w-full 
+  flex-1 
+  min-h-0
+}
+
+.dashboard-content {
+  @apply
+  w-full
+  flex-1
+  min-h-0
+  pl-6
+  flex
+  flex-col
+  px-8
+  pb-6
+  pt-6
+}
