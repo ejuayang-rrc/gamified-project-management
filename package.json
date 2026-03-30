@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm:start:frontend\" \"npm:start:backend\"",
-    "start:frontend": "npm run dev --workspace=@oqusquest/frontend",
+    "start:frontend": "npm run dev --workspace=@opusquest/frontend",
     "start:backend": "npm start --workspace=@opusquest/backend"
   },
   "keywords": [],
