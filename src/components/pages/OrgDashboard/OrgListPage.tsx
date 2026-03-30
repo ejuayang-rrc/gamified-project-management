@@ -1,9 +1,6 @@
-import { useState } from "react";
-import type { JSX } from "react";
- 
 import type { Organization } from "../../../types/organizationType";
 import { manageOrgs } from "../../../hooks/manageOrgs";
-import { OrgDisplay } from "./common/OrgDisplay";
+import { OrgDisplay } from "./widgets/OrgDisplay";
 
 type OrgListPageProps = {
   title: string,

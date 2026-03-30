@@ -6,7 +6,7 @@ export function manageOrgs(
   dependencies: unknown[],
   filterFn? : ((orgs: Organization) => boolean)|null,
 ) {
-  const [orgs, setOrgs] = useState<Organization[]>([]);
+  const [orgs, updateOrgs] = useState<Organization[]>([]);
   const [response, setResponse] = useState<string | null>();
 
   const fetchOrgs = async() => {
@@ -17,7 +17,9 @@ export function manageOrgs(
         result = result.filter(filterFn);
       }
 
-      setOrgs([...result]);
+      updateOrgs([...result]);
+      
+      console.log("Orgs updated.")
     } catch(e) {
       setResponse(`${e}`);
     }

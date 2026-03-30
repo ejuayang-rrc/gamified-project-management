@@ -1,11 +1,9 @@
-import type { Organization } from "../../../../types/organizationType";
 import type { JSX } from "react";
-import { OrgCell } from "../widgets/OrgCell";
 
-export function OrgDisplay(
-  {
-    orgs
-  } : {
+import type { Organization } from "../../../../types/organizationType";
+import { OrgCell } from "../common/OrgCell";
+
+export function OrgDisplay({orgs}: {
     orgs: Organization[]
   }
 ) {
@@ -15,8 +13,8 @@ export function OrgDisplay(
         org={org}
         key={org.id}
       />
-    );
-  })
+    )
+  });
 
   return (
     <ol>{listOrgs}</ol>

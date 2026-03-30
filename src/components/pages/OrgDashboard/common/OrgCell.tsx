@@ -8,8 +8,9 @@ export function OrgCell(
   }
 ) {
   return (
-    <div>
+    <div className="org-cell">
       <h1>{org.name}</h1>
+      <div></div>
     </div>
   );
 }
