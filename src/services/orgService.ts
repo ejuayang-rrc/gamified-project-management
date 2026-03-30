@@ -1,16 +1,37 @@
 import * as OrgRepo from "../apis/orgRepo";
 import type { Organization } from "../types/organizationType";
 
-export async function fetchOrg() {
-  const orgData = await OrgRepo.fetchOrg();
-  return orgData;
+export async function fetchOrgs() {
+  return await OrgRepo.fetchOrgs();
+}
+
+export async function fetchOrgById(id: number) {
+  return await OrgRepo.getOrgById(id);
+}
+
+export async function createOrg(name: string) {
+  const title = name?.trim() ?? "";
+
+  if (!title) {
+      throw new Error("Organization name is required.");
+  }
+
+  OrgRepo.createOrganization(name);
+}
+
+export async function deleteOrg(id: number) {
+  if (!id) {
+      throw new Error("ID is required");
+  }
+
+  OrgRepo.deleteOrganization(id);
 }
 
 export async function orgAddOrRemoveGroup(
   orgId: number,
   groupId: number
 ) {
-  const orgData: Organization[] = await OrgRepo.fetchOrg();
+  const orgData: Organization[] = await OrgRepo.fetchOrgs();
   let groupExists: boolean = false;
 
   // Check each group if the group is already in another organization
