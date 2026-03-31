@@ -4,53 +4,53 @@ export const orgData: Organization[] = [
   {
     "id": 0,
     "name": "Doofenshmirtz Evil Incorporated",
-    "groups": [1, 2, 3]
+    "groups": [1, 2]
   },
   {
     "id": 2,
     "name": "Umbrella Corporation",
-    "groups": [4, 5, 6]
+    "groups": [4]
   },
   {
     "id": 3,
     "name": "My House",
-    "groups": [7, 8, 9]
+    "groups": [7]
   },
     {
     "id": 4,
     "name": "Scronkly Org",
-    "groups": [10, 11]
+    "groups": [10]
   },
   {
     "id": 5,
     "name": "Gork",
-    "groups": [12]
+    "groups": [3, 6]
   },
   {
     "id": 6,
     "name": "Xitter",
-    "groups": [13, 14, 16]
+    "groups": [8, 9]
   }
   ,
   {
     "id": 7,
     "name": "The Skeld",
-    "groups": [15, 17]
+    "groups": []
   },
   {
     "id": 8,
     "name": "LMNOP",
-    "groups": [20, 21]
+    "groups": []
   },
   {
     "id": 9,
     "name": "The Guys Who Made QWOP",
-    "groups": [22, 24]
+    "groups": []
   }
   ,
   {
     "id": 10,
     "name": "Plort",
-    "groups": [23, 25]
+    "groups": []
   }
 ]

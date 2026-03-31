@@ -17,6 +17,13 @@ export function OrgDisplay({orgs}: {
   });
 
   return (
-    <ol>{listOrgs}</ol>
+    <div
+      className="
+        flex 
+        flex-wrap
+        w-full
+        justify-between
+      "
+    >{listOrgs}</div>
   )
 }
