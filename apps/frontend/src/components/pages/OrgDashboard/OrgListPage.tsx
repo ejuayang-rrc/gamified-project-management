@@ -29,31 +29,56 @@ const OrgListPage = ({title, orgDependencies, orgFilterFn}: OrgListPageProps) =>
           bg-white/10
           mb-[0.5rem]
       "/>
+      <form
+        className="
+          bg-zinc-900
+          m-[0.25rem]
+          p-[1rem]
+          rounded-[1.3rem]
+        "
+      > 
+        <h2
+        className="
+          text-xl 
+          tracking-tight 
+          pb-2
+        ">Create Organization</h2>
+        <div
+          className="
+            flex
+          "
+        >
+          <input 
+            type="text" 
+            id="dept-name" 
+            name="dept-name"
+            className="
+              p-[0.25rem]
+              bg-[#2A2A2F] 
+              rounded
+              font-[400]
+              w-full
+            "
+            placeholder="Add Department Name"
+          />
+          <button
+            type="button"
+            className="
+              p-[0.25rem]
+              bg-[#52525c] 
+              hover:bg-[#5F5F68]
+              rounded
+              font-[400]
+              cursor-pointer
+              w-[14rem]
+              ml-[0.5em]
+            "
+          >Create Organization</button>
+        </div>
+      </form>
       <OrgDisplay 
         orgs={orgs}
       />
-      <div
-        className="
-          m-auto
-        "
-      >
-        <button
-          type="button"
-          className="
-            p-[0.25rem]
-            bg-[#52525c] 
-            rounded-[1rem]
-            font-[400]
-            w-[6em]
-            h-[3em]
-          "
-        ><HiOutlinePlus
-          className="
-            text-3xl
-            m-auto
-          "
-        /></button>
-      </div>
     </>
   );
 };
