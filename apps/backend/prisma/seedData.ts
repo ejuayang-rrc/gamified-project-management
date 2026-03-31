@@ -2,15 +2,14 @@
 
 export const organizationSeedData = [
     {
-        organizationId: 1,
         name: "OpusQuest Inc.",
     },
 ];
 
 export const groupSeedData = [
-    { groupId: 1, name: "Alpha Team", numberOfUsers: 3, organizationId: 1 },
-    { groupId: 2, name: "Beta Team", numberOfUsers: 3, organizationId: 1 },
-    { groupId: 3, name: "Gamma Team", numberOfUsers: 3, organizationId: 1 },
+    { name: "Alpha Team", numberOfUsers: 3, organizationId: 1 },
+    { name: "Beta Team", numberOfUsers: 3, organizationId: 1 },
+    { name: "Gamma Team", numberOfUsers: 3, organizationId: 1 },
 ];
 
 export const userSeedData = [
@@ -30,6 +29,14 @@ export const userSeedData = [
     { username: "user9", email: "user9@example.com", groupId: 3 },
 ];
 
+const titles = [
+    "Build dashboard",
+    "Fix login bug",
+    "Write tests",
+    "Refactor backend",
+    "Update docs",
+];
+
 const difficulties = ["Easy", "Medium", "Hard"];
 const descriptions = [
     "Finish dashboard UI",
@@ -44,15 +51,14 @@ export const taskSeedData = Array.from({ length: 45 }, (_, i) => {
     const userId = Math.floor(i / 5) + 1;
 
     const baseTask = {
-        taskId: i + 1,
+        title: titles[i % titles.length],
         assignedId: userId,
-        AssignedOn: `2026-03-${10 + (i % 5)}`,
+        assignedOn: `2026-03-${10 + (i % 5)}`,
         dueDate: `2026-04-${5 + (i % 5)}`,
         difficulty: difficulties[i % difficulties.length],
         status: i % 2 === 0,
     };
 
-    // only include description sometimes
     if (i % 2 === 0) {
         return {
             ...baseTask,
@@ -60,5 +66,8 @@ export const taskSeedData = Array.from({ length: 45 }, (_, i) => {
         };
     }
 
-    return baseTask;
+    return {
+        ...baseTask,
+        description: "",
+    };
 });
