@@ -66,6 +66,7 @@ export const createTask = async (taskData: CreateTaskData): Promise<Task> => {
         });
         return structuredClone(newTask);
     } catch (error) {
+        console.error(error);
         throw new Error(`Task could not be created.`);
     }
 }
