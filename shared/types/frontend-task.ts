@@ -16,3 +16,15 @@ export type DifficultyLevel = keyof typeof difficultyRating;
 // Takes the difficulty label from the difficultyRating const
 // e.g. "easy", | "medium" | "intermediate" | etc...
 export type DifficultyLabel = typeof difficultyRating[DifficultyLevel];
+
+export type FrontendTask = {
+
+    id: number;
+    title: string;
+    assignedId: number;
+    assignedOn: string;
+    dueDate: string;
+    difficulty: DifficultyLevel;
+    status: boolean;
+    description: string;
+};
